@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    color: black;
+    background: rgba(255, 255, 255, 0.007);
+  }
+  
+  h1 {
+    margin: 20px 0 15px 0;  
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #main {
+    margin: 20px 0 15px 0;  
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  ul {
+   
+    width: 300px;
+    margin: 80px auto;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+  
+
+  .form-inline .form-control {
+    width: 50%;
+    margin-left: 80px;
+  }
+  
+  .done {
+    color:green;
+    text-decoration: line-through;
+  }
+  
+  .undone {
+    color:black;
+  }
+  
+  .icon {
+    margin: 6px 10px 6px 0;
+  }
+  
