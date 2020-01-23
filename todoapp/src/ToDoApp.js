@@ -36,6 +36,8 @@ class TodoListItem extends React.Component {
     this.onClickDone = this.onClickDone.bind(this);
   }
   onClickClose() {
+
+    console.log( this.props.index);
     let index = parseInt(this.props.index);
     this.props.removeItem(index);
   }
@@ -48,11 +50,13 @@ class TodoListItem extends React.Component {
     return (
       <li className="list-group-item ">
         <div className={todoClass}>
-          <span
-            className="glyphicon glyphicon-ok icon"
-            aria-hidden="true"
-            onClick={this.onClickDone}
-          ></span>
+          <span className="glyphicon glyphicon-ok icon" aria-hidden="true">
+            <input
+              type="checkbox"
+              className="toggle"
+              onClick={this.onClickDone}
+            />
+          </span>
           {this.props.item.value}
           <button type="button" className="close" onClick={this.onClickClose}>
             &times;
@@ -87,7 +91,7 @@ class TodoForm extends React.Component {
           type="text"
           ref="itemName"
           className="form-control"
-          placeholder="What needs to be done?..."
+          placeholder="What needs to be done?"
         />
       </form>
     );
@@ -122,6 +126,7 @@ class ToDoApp extends React.Component {
   }
   markTodoDone(itemIndex) {
     let todo = todoItems[itemIndex];
+    console.log(todo);
     todoItems.splice(itemIndex, 1);
     todo.done = !todo.done;
     todo.done ? todoItems.push(todo) : todoItems.unshift(todo);
