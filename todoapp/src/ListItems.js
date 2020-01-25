@@ -3,30 +3,38 @@ import "./ListItems.css";
 
 function ListItems(props) {
   const items = props.items;
+  let all = props.items.filter(item => !item.done);
+
   const listItems = items.map(item => {
     let todoClass = item.done ? "done" : "undone";
-    // console.log(item.done, todoClass);
+
+    console.log(item.done, todoClass);
     return (
-      <div className="list" key={item.key}>
-        <div className={todoClass}>
-          <input
-            type="checkbox"
-            id={item.key}
-            value={item.text}
-            onChange={e => {
-              props.markToDoDone(e.target.value, item.key);
-            }}
-          />
+      <div>
+        <div className="list" key={item.key}>
           <p>
-            <input
-              type="text"
-              id={item.key}
-              value={item.text}
-              onChange={e => {
-                props.setUpdate(e.target.value, item.key);
-              }}
-            />
-            <span>
+            
+              <input
+                type="checkbox"
+                id={item.key}
+                onChange={e => {
+                  props.markToDoDone(e.target.value, item.key);
+                }}
+              />
+            
+              <div className={todoClass}>
+                <div className="text">
+                <input
+                  type="text"
+                  id={item.key}
+                  value={item.text}
+                  onChange={e => {
+                    props.setUpdate(e.target.value, item.key);
+                  }}
+                />
+                </div>
+              </div>
+
               <button
                 type="click"
                 className="delete-button"
@@ -36,13 +44,19 @@ function ListItems(props) {
               >
                 &times;
               </button>
-            </span>
+    
           </p>
         </div>
       </div>
     );
   });
-  return <div>{listItems}</div>;
+  return (
+    <fragment>
+      {" "}
+      <div>{listItems}</div>
+      <div className="taskcounter">{all.length} task Remaining</div>
+    </fragment>
+  );
 }
 
 export default ListItems;

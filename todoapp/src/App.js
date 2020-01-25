@@ -38,7 +38,8 @@ class App extends React.Component {
     this.setState({
       currentItem: {
         text: e.target.value,
-        key: Date.now()
+        key: Date.now(),
+        
       }
     });
   }
@@ -92,7 +93,7 @@ class App extends React.Component {
               onChange={this.handleInput}
             ></input>
           </form>
-          <p>{this.state.items.text}</p>
+         
 
           <ListItems
             items={this.state.items}

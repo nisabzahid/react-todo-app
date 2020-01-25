@@ -1,36 +1,33 @@
-.list {
-  color: white;
-  width: 300px;
-  margin: 20px;
-  height: 50px;
-  background-color: white;
-  border-radius: 5px;
+.list{
+    background-color:white;
+    
+    color: black;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    
+    font-size: 18px;
+    border-radius: 10px;
 }
-.list p {
-  padding: 10px;
-  position: relative;
-  transition: ease-in-out;
+.list p{ 
+    
+    color: black;
+    width: 300px;
+    height: 50px;
+    
+    
+    font-size: 18px;
+    border-radius: 10px;
 }
-.list p input {
-  background-color: transparent;
-  border: 20px;
-  color: black;
-  font-size: 18px;
+.text{
+    margin-left: 15px;
 }
-.list p input:focus {
-  outline: none;
+.list p  div{
+    display: inline-block;
+    padding-top: 5px;
+    outline: none;
 }
-.list p span {
-  position: absolute;
-  right: 10px;
+.done [value] {
+    color:gray;
+    text-decoration: line-through;
 }
-.done {
-  color: green;
-  text-decoration: line-through;
-}
-.delete-button {
-  margin: 0 5px;
-  font-size: 15px;
-  cursor: pointer;
-}
-

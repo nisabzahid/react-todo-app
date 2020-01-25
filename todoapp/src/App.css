@@ -2,14 +2,14 @@ body {
   background-color: whitesmoke;
 }
 .App {
-  background-color: gray;
+  background-color:gray;
   min-height: 500px;
   width: 400px;
   margin: 40px auto;
 }
 
 #to-do-form input {
-  background-color: white;
+  background-color:white;
   border: 10px;
   color: black;
   width: 300px;
@@ -23,16 +23,5 @@ body {
   color: black;
 }
 #to-do-form input:focus {
-  outline: none;
-}
-#to-do-form button {
-  height: 50px;
-  width: 80px;
-  border-radius: 5px;
-  border: 0;
-  background-color: white;
-  cursor: pointer;
-}
-#to-do-form button:focus {
   outline: none;
 }
